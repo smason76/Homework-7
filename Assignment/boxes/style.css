@@ -1,0 +1,113 @@
+
+/*global css*/
+
+.clearfix:after {
+    content: '';
+    clear: both;
+    display: table;
+    height: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+nav,
+li,
+.hamburger,
+.full-up,
+.four-up,
+footer,
+.three-up {
+    border: 1px solid black;
+}
+
+nav {
+    padding: 5px;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: inline-block;
+    height: 35px;
+    width: 85px;
+    margin-right: 85px;
+}
+
+/*desktop styles follow*/
+
+.hamburger {
+    display: none;
+    width: 60px;
+    height: 35px;
+    float: right;
+}
+
+.line {
+    margin: 3px auto 0;
+    width: 60%;
+    height: 2px;
+    background-color: #000;
+}
+
+section {
+    margin: 10px 0;
+}
+
+.full-up {
+    height: 105px;
+}
+
+.four-up {
+    width: 20%;
+    height: 105px;
+    float: left;
+    margin-top: 10px;
+}
+
+.four-up + .four-up {
+    margin-left: calc(20%/3);
+}
+
+footer {
+    padding: 15px;
+}
+
+.three-up {
+    width: 25%;
+    height: 105px;
+    float: left;
+}
+
+.three-up + .three-up {
+    margin-left: calc(25%/2);
+}
+
+
+/* conditional css that applies when the screen is less than 650px wide*/
+
+@media only screen and (max-width: 650px) {
+    /*    (min-width: xpx)*/
+    ul {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+    .four-up,
+    .three-up {
+        width: 100%;
+    }
+    .four-up + .four-up,
+    .three-up + .three-up {
+        margin-left: 0;
+    }
+    .three-up {
+        margin-top: 10px;
+    }
+}
+/*mobile display*/
